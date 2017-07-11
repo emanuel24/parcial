@@ -3,4 +3,8 @@
 <br>
 <h2>Modificacion1</h2>
 
+
 <center><img src="{{=URL('static','images/logo.png')}}" width="700" height="400"</img></center>
+
+
+<center><a href="#" class="btn btn-primary btn-lg disabled" role="button">Sin Registros</a></center>
