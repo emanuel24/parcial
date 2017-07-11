@@ -1,0 +1,4 @@
+{{extend 'layout.html'}}
+<h3><u>Ingrese datos para solicitud de instalacion:</u></h3>
+<br>
+{{=f}}

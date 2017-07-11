@@ -1,0 +1,4 @@
+{{extend 'layout_gerentes.html'}}
+
+<h1>Alta de gerente:</h1>
+{{=f}}

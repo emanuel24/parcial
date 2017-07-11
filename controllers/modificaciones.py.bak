@@ -1,0 +1,14 @@
+# -*- coding: utf-8 -*-
+
+def editar_instalacion():
+    id_instalacion = request.args[0]                                           # obtengo el primer argumento (ver URL)
+    solicitud =  db(db.instalaciones.id == id_instalacion).select().first()    # busco el registro en la bbdd
+    form=SQLFORM(db.instalaciones, solicitud)                                  # armo el formulario para modificar este registro:
+    if form.accepts(request.vars, session):
+        session.flash = 'Formulario correctamente cargado'
+        redirect(URL(c="consultas", f="listado_clientes"))
+    elif form.errors:
+		response.flash = 'Su formulario contiene errores, porfavor modifiquelo'
+    else:
+		response.flash = 'Por favor rellene el formulario'
+    return dict(f=form)
